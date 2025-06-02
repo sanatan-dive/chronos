@@ -179,8 +179,7 @@ const Hero = () => {
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Create blockchain time capsules containing messages, art, 
-            predictions, or secrets. Lock until a specific time or condition, 
-            then reveal to the world.
+            predictions, or secrets.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
