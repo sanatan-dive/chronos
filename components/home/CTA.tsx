@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Mail } from "lucide-react"
+import Image from "next/image"
 
 const CTA = () => {
   // Animation variants for gradient overlay
@@ -42,9 +43,13 @@ const CTA = () => {
   return (
     <section className="py-24 bg-black relative overflow-hidden">
       {/* Animated background */}
+      <div className="flex justify-center items-center absolute inset-0 opacity-60">
+        <Image src="https://cdn.multiversx.com/webflow/sidechains.webp" width={2200} height={720} alt="" loading="lazy" className="flex justify-center items-center"/>
+
+      </div>
       <div className="absolute inset-0 opacity-10">
+        <div  className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600 rounded-full filter blur-[128px]" />
         <motion.div 
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600 rounded-full filter blur-[128px]"
           variants={gradientVariants}
           initial="initial"
           animate="animate"
@@ -102,8 +107,9 @@ const CTA = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="p-6 bg-slate-900/80 border border-white/10 rounded-xl"
+            className="relative bg-black/70 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 h-full"
           >
+            <div className=" absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"/>
             <motion.p 
               className="text-cyan-400 font-medium mb-2"
               initial={{ opacity: 0 }}
@@ -112,7 +118,7 @@ const CTA = () => {
             >
               COMING SOON
             </motion.p>
-            <h3 className="text-xl font-bold mb-4">Mass Revelation Event - New Year's 2026</h3>
+            <h3 className="text-xl font-bold mb-4">Mass Revelation Event - New Year&apos;s 2026</h3>
             <p className="text-gray-400">
               Join our biggest capsule opening event yet! Thousands of time capsules will unlock 
               simultaneously as we enter 2026. Mint a unique NFT capsule and add your messages, art, predictions, or secrets.
@@ -126,7 +132,9 @@ const CTA = () => {
               <div className="inline-block bg-slate-800 px-3 py-1 rounded-full text-xs text-gray-300">
                 238 days remaining
               </div>
+              
             </motion.div>
+           
           </motion.div>
         </motion.div>
       </div>

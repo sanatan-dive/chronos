@@ -78,10 +78,15 @@ const config: Config = {
             height: '0',
           },
         },
+        spin: {
+          '0%': { transform: 'rotateZ(0deg)' },
+          '100%': { transform: 'rotateZ(360deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        spin: 'spin 20s linear infinite', // Outline-Orbit rotation
       },
     },
   },

@@ -13,6 +13,7 @@ import {
   FileText
 } from "lucide-react"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import GlobeComponent from "../Globe"
 
 const Features = () => {
   const features = [
@@ -107,9 +108,13 @@ const Features = () => {
 
   return (
     <div className="relative">
+      <div className="absolute inset-0 -z-50 opacity-60"><GlobeComponent /></div>
+       
       <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-600 rounded-full filter blur-[128px]"/>
+       
         <motion.div 
-          className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-600 rounded-full filter blur-[128px]"
+          
           variants={gradientVariants}
           initial="initial"
           animate="animate"
@@ -147,7 +152,8 @@ const Features = () => {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-slate-900/60 border-white/5 relative hover:border-cyan-500/50 transition-all duration-300">
+                <Card className="relative bg-black/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 h-full">
+                <div className=" absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"/>
                   <CardHeader>
                     <div className="mb-4">{feature.icon}</div>
                     <CardTitle className="text-xl">{feature.title}</CardTitle>
@@ -181,8 +187,9 @@ const Features = () => {
                   whileInView="animate"
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br to-stone-800 p-6 rounded-xl border border-white/5 relative hover:border-cyan-500/50 transition-all duration-300"
+                  className="bg-gradient-to-br from-transparent to-stone-950 p-6 rounded-xl border border-white/5 relative hover:border-cyan-500/50 transition-all duration-300"
                 >
+                  <div className=" absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"/>
                   <div className="flex items-center justify-center mb-4">
                     <div className="h-14 w-14 rounded-full bg-slate-800 flex items-center justify-center">
                       {type.icon}

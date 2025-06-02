@@ -50,6 +50,7 @@ export const motion = {
   },
   button: (props: MotionProps & React.HTMLProps<HTMLButtonElement>) => {
     const { initial, animate, whileInView, whileHover, transition, viewport, style, ...rest } = props;
+    // @ts-ignore
     return <button {...rest} style={style || {}} />;
   },
   a: (props: MotionProps & React.HTMLProps<HTMLAnchorElement>) => {

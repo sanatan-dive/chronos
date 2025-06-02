@@ -1,7 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Hide default cursor globally */
+* {
+  cursor: none !important;
+}
 
+/* Ensure interactive elements also hide cursor */
+a, button, input, textarea, select, [role="button"], .cursor-pointer {
+  cursor: none !important;
+}
+
+
+
+/* Add some demo content styles */
+.demo-content {
+  @apply min-h-screen p-8 space-y-8;
+}
+
+.demo-button {
+  @apply px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-white rounded-lg transition-colors duration-200;
+}
+
+.demo-link {
+  @apply text-cyan-400 hover:text-cyan-300 underline transition-colors duration-200;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 0, 0, 0;

@@ -4,11 +4,12 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import CyanCursor from '@/components/cursor';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'], 
-  variable: '--font-space-grotesk' 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk'
 });
 
 export const metadata: Metadata = {
@@ -30,8 +31,10 @@ export default function RootLayout({
           enableSystem={false}
         >
           <Header />
-          <main>{children}</main>
+          <main>{children}<CyanCursor /></main>
+          
           <Footer />
+          
         </ThemeProvider>
       </body>
     </html>
