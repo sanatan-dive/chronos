@@ -58,7 +58,7 @@ export const ConnectBtn = () => {
 
     return (
       <div className="relative">
-        <div className="flex flex-col gap-2 p-4 bg-stone-900/95 border-2 border-cyan-400/60 rounded-lg backdrop-blur-sm">
+        <div className="flex absolute  top-8 flex-col gap-2 p-4 bg-stone-900/95 border-2 border-cyan-400/60 rounded-lg backdrop-blur-sm">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-white bg-gradient-to-br from-cyan-400 via-cyan-500 to-cyan-600 bg-clip-text font-semibold text-sm">Choose Wallet</h3>
             <button
@@ -186,9 +186,9 @@ export const ConnectBtn = () => {
     return (
       <button 
         className="
-          px-6 py-3 
+          px-4 py-2 
           bg-red-600 border-2 border-red-400 
-          text-white font-semibold 
+          text-white text-sm 
           rounded-lg 
           transition-all duration-300
           hover:bg-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.4)]
