@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { PencilLine, LockKeyhole, Clock, Unlock } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState<number | null>(null)
   const [animationState, setAnimationState] = useState('idle')
+  const router = useRouter();
 
   const steps = [
     {
@@ -297,6 +299,7 @@ const HowItWorks = () => {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-[#00D8FF] to-cyan-400 hover:from-cyan-400 hover:to-[#00D8FF] text-black font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-[#00D8FF]/20 transition-all duration-300"
+            onClick={() => router.push('/create')}
           >
             Create Your First Capsule
           </Button>
